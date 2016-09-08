@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="buildfire" type="app" view="browser" os="Windows" browser="Chrome" majorversion="52" fullversion="52.0.2743.116" class="ng-scope">
+<head>
+    <style type="text/css">
+        .ng-animate.item:not(.left):not(.right) {
+            -webkit-transition: 0s ease-in-out left;
+            transition: 0s ease-in-out left;
+        }
+    </style>
+    <style type="text/css">
+        @charset "UTF-8";
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+    </style>
+    <base href="./" target="_blank">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Mobile App">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App</title>
+    <link id="appThemeCSS" rel="stylesheet" type="text/css" href="http://app.buildfire.com/api/app/styles/appTheme.css?appId=2cb48dd4-5e49-11e6-bfe7-124798dea82d&amp;liveMode=undefined">
+    <style>
+        .ngf-hide {
+            display: none !important;
+        }
+    </style>
+</head>
+<!----------------------------------------------------------------------
+    DONT CHANGE THIS FILE WITHOUT TALKING TO DANIEL HINDI
+---------------------------------------------------------------------->
+<body data-feedly-mini="yes">
+    <!--<script type="text/javascript" src="datadump.js"></script>-->
+    <script type="text/javascript" src="appResources.js"></script>
+    <script src="http://dmc1acwvwny3.cloudfront.net/atatus.js"></script>
+    <script type="text/javascript" src="scripts/framework/siteConfigLoader.js"></script>
+    <script type="text/javascript" src="/api/siteConfig.js?global=siteConfig&amp;appId=2cb48dd4-5e49-11e6-bfe7-124798dea82d"></script>
+    <script type="text/javascript" src="scripts/framework/appContext.js"></script>
+    <script type="text/javascript" src="scripts/lib/lodash.compat.js"></script>
+    <script type="text/javascript" src="scripts/lib/minimongo.js"></script>
+    <script type="text/javascript" src="scripts/lib/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/angular-animate.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/framework/cache.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="pages/controllers/fauxHttpCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/launcherCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/pluginContainerCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/logViewerCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/menuCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/authCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/pushNotificationCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/pushHistoryCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/pushGroupsCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/pushSubscriptionsCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/userProfileCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/editUserProfileCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/servicesCtrl.js"></script>
+    <script type="text/javascript" src="pages/controllers/accessCodeCtrl.js"></script>
+    <script type="text/javascript" src="scripts/framework/modalCtrl.js"></script>
+    <script type="text/javascript" src="pages/services/stringResourceService.js"></script>
+    <script type="text/javascript" src="scripts/lib/loading-bar.js"></script>
+    <script type="text/javascript" src="scripts/lib/fastclick.js"></script>
+    <script type="text/javascript" src="scripts/framework/postMaster.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/appearanceAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/geoAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/datastoreAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/userDataDumpAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/userDatastoreAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/analyticsAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/appAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/authAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/historyAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/mediaAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/pluginInstanceAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/pluginAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/deviceAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/bluetoothAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/localNotificationsAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/appearanceHandler.js"></script>
+    <script type="text/javascript" src="scripts/framework/pluginAPI/actionItemsAPI.js"></script>
+    <script type="text/javascript" src="scripts/framework/cpSync.js"></script>
+    <script type="text/javascript" src="scripts/framework/pushNotifications.js"></script>
+    <script type="text/javascript" src="scripts/framework/deviceEventHandlers.js"></script>
+    <script type="text/javascript" src="scripts/framework/imageTools.js"></script>
+    <script type="text/javascript" src="scripts/framework/remoteDatastore.js"></script>
+    <script type="text/javascript" src="scripts/framework/offlineDatastore.js"></script>
+    <script type="text/javascript" src="scripts/lib/ng-file-upload-shim.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/hammer.2.0.4.js"></script>
+    <script type="text/javascript" src="scripts/lib/wptr.1.1.js"></script>
+    <script type="text/javascript" src="scripts/lib/moment.min.js"></script>
+    <script type="text/javascript" src="scripts/framework/userTags.js"></script><link rel="stylesheet" href="styles/bootstrap.css"><link rel="stylesheet" href="styles/loading-bar.css"><link rel="stylesheet" href="styles/siteIcons.css"><link rel="stylesheet" href="styles/helper.css"><link rel="stylesheet" href="styles/transitionAnimation.css"><link rel="stylesheet" href="styles/appStyle.css"><!-- ngInclude: 'fragments/auth/auth.html' --><div id="login" ng-include="'fragments/auth/auth.html'" class="ng-scope">
+        <style class="ng-scope">
+            .login-holder {
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 8;
+                padding-bottom: 80px;
+                font-family: Helvetica, Sans-Serif, Arial;
+                background: #fff;
+            }
+
+                .login-holder .login.content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 130px 12px 15px !important;
+                    z-index: 9;
+                    overflow: auto;
+                }
+
+                    .login-holder .login.content .form {
+                        padding-bottom: 15px;
+                    }
+
+                        .login-holder .login.content .form .form-control {
+                            box-shadow: none;
+                        }
+
+                .login-holder p.message {
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+
+            .margin-top-ten {
+                margin-top: 10px;
+            }
+
+            .margin-top-twenty {
+                margin-top: 20px;
+            }
+
+            .margin-bottom-ten {
+                margin-bottom: 10px;
+            }
+
+            .margin-bottom-twenty {
+                margin-bottom: 20px;
+            }
+
+            .login-holder .moreoptions {
+                margin-top: 20px;
+            }
+
+                .login-holder .moreoptions a {
+                    display: inline-block;
+                    width: 44px;
+                    height: 44px;
+                    margin: 10px 10px -2px;
+                    border-radius: 100%;
+                }
+
+                    .login-holder .moreoptions a.facebook {
+                        background: no-repeat center center;
+                        background-size: 100% 100%;
+                    }
+
+                    .login-holder .moreoptions a.twitter {
+                        background: no-repeat center center;
+                        background-size: 100% 100%;
+                    }
+
+                    .login-holder .moreoptions a.googleplus {
+                        background: no-repeat center center;
+                        background-size: 100% 100%;
+                    }
+
+            .login-holder .bottom-info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 0 15px 15px;
+            }
+
+                .login-holder .bottom-info p {
+                    margin-bottom: 0;
+                }
+
+            .login-holder .termstext {
+                padding: 0 20px;
+                font-size: 13px;
+                line-height: 18px;
+            }
+
+            .login-holder .registration .moreoptions {
+                margin-top: 0;
+            }
+
+            .login-holder .form.forgotpassword {
+                margin-top: 44px;
+            }
+
+            .login-holder .cancel-link {
+                position: absolute;
+                top: 16px;
+                left: 12px;
+                z-index: 9999999;
+            }
+
+                .login-holder .cancel-link span {
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-weight: 100;
+                }
+        </style>
+        <div class="login-holder backgroundColorTheme ng-scope ng-hide" ng-controller="authCtrl" ng-show="authShown">
+            <div class="cancel-link" ng-click="closeLogin()" onclick="clickFeedback(this);" ng-show="allowCancel">
+                <a class="text-primary">Cancel</a>
+            </div>
+            <div class="login ng-hide" ng-show="loginShown">
+                <form name="frmAuthLogin" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-pattern">
+                    <div class="content login padded text-center">
+                        <div class="form login">
+                            <div ng-show="invalidCredentials" class="alert alert-sm alert-danger margin-bottom-ten ng-binding ng-hide">
+
+                            </div>
+                            <div class="input">
+                                <input type="email" name="txtEmail" class="form-control inputApp ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Email" ng-model="email" maxlength="150" required="" ng-focus="errors.emailFocus=false" ng-blur="errors.emailFocus=true">
+
+                                <div class="alert alert-danger alert-sm text-center margin-top-ten ng-hide" ng-show="errors.emailFocus &amp;&amp; frmAuthLogin.txtEmail.$dirty &amp;&amp; frmAuthLogin.txtEmail.$invalid">
+                                    Enter valid email.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="password" name="txtPassword" class="form-control inputApp ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" placeholder="Password" ng-model="password" maxlength="150" pattern=".{6,30}" required="" title="Password must be at least 6 characters." ng-focus="errors.passwordFocus=false" ng-blur="errors.passwordFocus=true">
+
+                                <div class="alert alert-danger alert-sm text-center margin-top-ten ng-hide" ng-show="errors.passwordFocus &amp;&amp; frmAuthLogin.txtPassword.$dirty &amp;&amp; frmAuthLogin.txtPassword.$invalid">
+                                    Password must be at least 6 characters.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="submit" class="btn btn-primary stretch" ng-disabled="frmAuthLogin.$invalid" ng-click="frmAuthLogin.txtEmail.focus();frmAuthLogin.txtEmail.blur();login();" value="Log In" disabled="disabled">
+                            </div>
+                            <div class="input margin-top-ten text-center">
+                                <a class="text-primary" ng-click="showForgetPassword();">Forgot Password</a>
+                            </div>
+                        </div>
+                        <div class="moreoptions">
+                            <p class="text-center">or sign in with</p>
+                            <a class="facebooklogin facebook" ng-style="{'background-image':'url('+_appRoot+'media/fb.png)'}" ng-click="requestLoginProvider('facebook');" style="background-image: url(&quot;media/fb.png&quot;);"></a>
+                            <a class="twitterLogin twitter" ng-style="{'background-image':'url('+_appRoot+'media/twitter.png)'}" ng-click="requestLoginProvider('twitter');" style="background-image: url(&quot;media/twitter.png&quot;);"></a>
+                            <a class="googlepluslogin googleplus hidden" ng-style="{'background-image':'url('+_appRoot+'media/googleplus.png)'}" ng-click="requestLoginProvider('googleplus');" style="background-image: url(&quot;media/googleplus.png&quot;);"></a>
+                        </div>
+                        <div class="hidden">
+                            <a ng-click="authShown = false">Cancel</a>
+                        </div>
+                        <div class="bottom-info">
+                            <hr class="small">
+                            <p>Don't have an account?</p>
+                            <a class="text-primary" ng-click="showRegistration();">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login ng-hide" ng-show="registrationShown">
+                <form name="frmAuthRegister" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength">
+                    <div class="content login padded text-center">
+                        <div class="form registration">
+                            <div ng-show="invalidRegister" class="alert alert-sm alert-danger margin-bottom-ten ng-binding ng-hide">
+                            </div>
+                            <div class="hidden">
+                                <a href="#" class="btn btn-primary margin-top-twenty ng-pristine ng-untouched ng-valid" ngf-multiple="false" ngf-accept="'image/*'" ngf-select="" ng-model="uploadFile" ngf-allow-dir="true">
+                                    Profile Image
+                                </a>
+
+                                <div class="alert alert-primary alert-sm margin-top-twenty text-center ng-hide" ng-show="showProgressMessage">
+                                    Uploading image. Please wait...
+                                </div>
+                            </div>
+                            <div class="input">
+                                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="txtEmail" class="form-control inputApp ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" placeholder="Email" ng-model="email" maxlength="150" required="" ng-focus="errors.emailFocus=false" ng-blur="errors.emailFocus=true">
+
+                                <div class="alert alert-danger alert-sm margin-top-ten text-center ng-hide" ng-show="errors.emailFocus &amp;&amp; frmAuthRegister.txtEmail.$dirty &amp;&amp; frmAuthRegister.txtEmail.$invalid">
+                                    Please enter a valid email.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="password" name="txtPassword" class="form-control inputApp ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" placeholder="Password" ng-model="password" maxlength="150" pattern=".{6,30}" required="" title="password needs to be at least 6 characters long" ng-focus="errors.passwordFocus=false" ng-blur="errors.passwordFocus=true">
+
+                                <div class="alert alert-danger alert-sm margin-top-ten ng-hide" ng-show="errors.passwordFocus &amp;&amp; frmAuthRegister.txtPassword.$dirty &amp;&amp; frmAuthRegister.txtPassword.$invalid">
+                                    Password must be at least 6 characters
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="submit" value="Register" class="btn btn-primary stretch" ng-disabled="frmAuthRegister.$invalid" ng-click="frmAuthRegister.txtEmail.focus();frmAuthRegister.txtEmail.blur();register();" disabled="disabled">
+                            </div>
+                            <div class="checkbox hidden">
+                                <input ng-model="allowToRegister" type="checkbox" class="register-EULA ng-pristine ng-untouched ng-valid">
+                                I agree to the <a ng-click="openTermsAndConditions();">
+                                    Terms
+                                    and Conditions
+                                </a>
+                            </div>
+                            <p class="text-center margin-top-ten termstext">
+                                By clicking Register, you agree to our<br><a ng-click="openTermsAndConditions();">
+                                    Terms and
+                                    Conditions
+                                </a>
+                            </p>
+                        </div>
+                        <div class="moreoptions">
+                            <p class="text-center">or register with</p>
+                            <a class="facebooklogin facebook" ng-style="{'background-image':'url('+_appRoot+'media/fb.png)'}" ng-click="requestLoginProvider('facebook');" style="background-image: url(&quot;media/fb.png&quot;);"></a>
+                            <a class="twitterLogin twitter" ng-style="{'background-image':'url('+_appRoot+'media/twitter.png)'}" ng-click="requestLoginProvider('twitter');" style="background-image: url(&quot;media/twitter.png&quot;);"></a>
+                            <a class="googlepluslogin googleplus hidden" ng-style="{'background-image':'url('+_appRoot+'media/googleplus.png)'}" ng-click="requestLoginProvider('googleplus');" style="background-image: url(&quot;media/googleplus.png&quot;);"></a>
+                        </div>
+                        <div class="bottom-info">
+                            <hr class="small">
+                            <p>Already have an account?</p>
+                            <a class="text-primary" ng-click="showLogin();">Sign In</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login ng-hide" ng-show="forgetPasswordShown">
+                <form name="frmAuthForgetPassword" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength">
+                    <div class="content login padded text-center">
+                        <div class="form forgotpassword">
+                            <div ng-show="invalidCredentials" class="alert alert-sm alert-danger margin-bottom-ten text-center ng-hide">
+                                Email does not exist in system.
+                            </div>
+                            <div class="input">
+                                <input type="email" name="txtEmail" class="form-control inputApp ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Email" ng-model="email" maxlength="150" required="" ng-focus="errors.emailFocus=false" ng-blur="errors.emailFocus=true">
+
+                                <div class="alert alert-danger alert-sm margin-top-ten text-center ng-hide" ng-show="errors.emailFocus &amp;&amp; frmAuthForgetPassword.txtEmail.$dirty &amp;&amp; frmAuthForgetPassword.txtEmail.$invalid">
+                                    Email does not exist in system.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="submit" value="Reset Password" class="btn btn-primary stretch" ng-disabled="frmAuthForgetPassword.$invalid" ng-click="frmAuthForgetPassword.txtEmail.focus();frmAuthForgetPassword.txtEmail.blur();forgotPassword();" disabled="disabled">
+                            </div>
+                            <div class="input margin-top-ten text-center">
+                                <a class="text-primary" ng-click="showLogin();">Go Back</a>
+                            </div>
+                        </div>
+                        <div class="bottom-info">
+                            <hr class="small">
+                            <p>Don't have an account?</p>
+                            <a class="text-primary" ng-click="showRegistration();">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login ng-hide" ng-show="resetPasswordShown">
+                <form name="frmAuthResetPassword" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-pattern">
+                    <div class="content login padded text-center">
+                        <p class="message">Enter your email address, secret code and new password.</p>
+
+                        <div class="form resetpassword">
+                            <div ng-show="invalidReset" class="alert alert-sm alert-danger margin-bottom-ten ng-binding ng-hide"></div>
+                            <div class="input">
+                                <input type="email" name="txtEmail" class="form-control inputApp ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Email" ng-model="email" maxlength="150" required="" ng-focus="errors.emailFocus=false" ng-blur="errors.emailFocus=true">
+
+                                <div class="alert alert-danger alert-sm text-center margin-top-ten ng-hide" ng-show="errors.emailFocus &amp;&amp; frmAuthResetPassword.txtEmail.$dirty &amp;&amp; frmAuthResetPassword.txtEmail.$invalid">
+                                    Email is invalid.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="text" name="txtSecretCode" class="form-control inputApp ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Secret Code" ng-model="secretCode" maxlength="15" required="" ng-focus="errors.codeFocus=false" ng-blur="errors.codeFocus=true">
+
+                                <div class="alert alert-danger alert-sm text-center margin-top-ten ng-hide" ng-show="errors.codeFocus &amp;&amp; frmAuthResetPassword.txtSecretCode.$dirty &amp;&amp; frmAuthResetPassword.txtSecretCode.$invalid">
+                                    Email is invalid.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="password" name="txtPassword" class="form-control inputApp ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" placeholder="New Password" ng-change="frmAuthResetPassword.txtCPassword.pattern = this.value;" ng-model="newPassword" maxlength="150" pattern=".{6,30}" required="" title="Password must be at least 6 characters." ng-focus="errors.passwordFocus=false" ng-blur="errors.passwordFocus=true">
+
+                                <div class="alert alert-danger alert-sm text-center margin-top-ten ng-hide" ng-show="errors.passwordFocus &amp;&amp; frmAuthResetPassword.txtPassword.$dirty &amp;&amp; frmAuthResetPassword.txtPassword.$invalid">
+                                    Password must be at least 6 characters.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="password" name="txtCPassword" class="form-control inputApp ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" placeholder="Confirm Password" ng-model="confirmPassword" maxlength="150" pattern=".{6,30}" required="" title="Confirm password." ng-focus="errors.cpasswordFocus=false" ng-blur="errors.cpasswordFocus=true">
+
+                                <div class="alert alert-danger alert-sm text-center margin-top-ten ng-hide" ng-show="errors.cpasswordFocus &amp;&amp; frmAuthResetPassword.txtCPassword.$dirty &amp;&amp; frmAuthResetPassword.txtCPassword.$invalid">
+                                    Passwords do not match.
+                                </div>
+                            </div>
+                            <div class="input margin-top-ten">
+                                <input type="submit" value="Reset" class="btn btn-primary stretch" ng-disabled="frmAuthResetPassword.$invalid" ng-click="frmAuthResetPassword.txtEmail.focus();frmAuthResetPassword.txtEmail.blur();resetPassword();" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login ng-binding ng-hide" ng-show="successShown">
+
+            </div>
+        </div>
+    </div><!-- ngInclude: 'fragments/menu/menu.html' --><div id="menu" ng-include="'fragments/menu/menu.html'" class="ng-scope" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <nav id="menuNav" class="menu ng-scope" ng-controller="menu">
+            <span id="sideMenuCloseButton" ng-click="closeMenu()" onclick="clickFeedback(this);" class="icon icon-cross2 menu-close bodyTextTheme"></span>
+            <a class="username padding-bottom-five clearfix ng-hide" ng-show="currentUser!=null" ng-click="openPage('userProfile');">
+                <div class="media avatar pull-left margin-top-zero ng-hide" ng-show="currentUser.imageUrl">
+                    <img onerror="this.src=window._appRoot+'media/avatar.png'">
+                </div>
+                <p class="user-name ellipsis bodyTextTheme ng-binding">
+                    User Profile
+                </p>
+            </a>
+            <a class="padding-top-five padding-bottom-five logout clearfix ng-hide" ng-show="currentUser!=null">
+                <p class="dangerTheme ng-isolate-scope" ng-click="logout();" onclick="clickFeedback(this);" data-translate="logOut">Log Out</p>
+            </a>
+            <a class="username padding-bottom-five login clearfix" ng-show="currentUser==null">
+                <p class="primaryTheme ng-isolate-scope" ng-click="login();" onclick="clickFeedback(this);" data-translate="login" data-hide-login="">Login</p>
+            </a>
+            <a class="notifications padding-top-five " ng-click="openPage('pushGroups');" onclick="clickFeedback(this);">
+                <p class="ellipsis bodyTextTheme ng-isolate-scope" data-translate="notifications" data-hide-parent="">Notifications</p>
+                <div class="notification-circle primaryBackgroundTheme ng-hide" ng-show="unseenPushCount">
+                    <span class="ng-binding"></span>
+                </div>
+            </a>
+
+            <!--
+            <div class="hidden">
+                <a class="divider titleBarBackgroundTheme">
+                    <p class="ellipsis titleBarTextAndIcons">Now Playing</p>
+                </a>
+                <a class="playing clearfix">
+                    <div class="media pull-left">
+                        <img src="http://www.placehold.it/60x60">
+                    </div>
+                    <p class="ellipsis bodyTextTheme pull-left">Nothing in My Way - The Best of Keane</p>
+                    <span class="icon icon-play-circle primaryTheme pull-right"></span>
+                    <span class="icon icon-pause-circle primaryTheme pull-right hidden"></span>
+                </a>
+            </div>
+            <a class="hidden">
+                <div class="media pull-left">
+                    <img src="http://www.placehold.it/35x35">
+                </div>
+                <p class="ellipsis bodyTextTheme" data-translate="settings" data-hide-parent>Settings</p>
+            </a>
+            -->
+
+            <a class="divider titleBarBackgroundTheme">
+                <p class="ellipsis titleBarTextAndIcons ng-isolate-scope" data-translate="appContent" data-hide-parent="">App Content</p>
+            </a>
+            <div class="clearfix">
+                <a class="item-link" onclick="clickFeedback(this);">
+                    <p class="ellipsis bodyTextTheme ng-isolate-scope" ng-click="openPage('/');" data-translate="home" data-hide-parent="">Home</p>
+                </a>
+                <!-- ngRepeat: w in sideMenu.result --><a class="item-link ng-scope" ng-repeat="w in sideMenu.result" ng-click="click(w);" onclick="clickFeedback(this);">
+                    <!-- ngIf: w.data.iconUrl --><div class="media pull-left ng-scope" ng-if="w.data.iconUrl">
+                        <img ng-src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://imageserver.prod.s3.amazonaws.com/2cb48dd4-5e49-11e6-bfe7-124798dea82d/f4713420-5e90-11e6-9190-ab868f0e9ce5.jpg" ng-show="haveIcon()" src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://imageserver.prod.s3.amazonaws.com/2cb48dd4-5e49-11e6-bfe7-124798dea82d/f4713420-5e90-11e6-9190-ab868f0e9ce5.jpg">
+                    </div><!-- end ngIf: w.data.iconUrl -->
+                    <!-- ngIf: w.data.iconClassName -->
+                    <p class="ellipsis bodyTextTheme ng-binding">Newsletter</p>
+                </a><!-- end ngRepeat: w in sideMenu.result --><a class="item-link ng-scope" ng-repeat="w in sideMenu.result" ng-click="click(w);" onclick="clickFeedback(this);">
+                    <!-- ngIf: w.data.iconUrl --><div class="media pull-left ng-scope" ng-if="w.data.iconUrl">
+                        <img ng-src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://imageserver.prod.s3.amazonaws.com/2cb48dd4-5e49-11e6-bfe7-124798dea82d/106bde50-5e78-11e6-9a93-d18890743f8f.jpg" ng-show="haveIcon()" src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://imageserver.prod.s3.amazonaws.com/2cb48dd4-5e49-11e6-bfe7-124798dea82d/106bde50-5e78-11e6-9a93-d18890743f8f.jpg">
+                    </div><!-- end ngIf: w.data.iconUrl -->
+                    <!-- ngIf: w.data.iconClassName -->
+                    <p class="ellipsis bodyTextTheme ng-binding">Jobs</p>
+                </a><!-- end ngRepeat: w in sideMenu.result --><a class="item-link ng-scope" ng-repeat="w in sideMenu.result" ng-click="click(w);" onclick="clickFeedback(this);">
+                    <!-- ngIf: w.data.iconUrl --><div class="media pull-left ng-scope" ng-if="w.data.iconUrl">
+                        <img ng-src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://imageserver.prod.s3.amazonaws.com/2cb48dd4-5e49-11e6-bfe7-124798dea82d/b6be38b0-5eb5-11e6-a506-ddc0936cc5d4.jpg" ng-show="haveIcon()" src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://imageserver.prod.s3.amazonaws.com/2cb48dd4-5e49-11e6-bfe7-124798dea82d/b6be38b0-5eb5-11e6-a506-ddc0936cc5d4.jpg">
+                    </div><!-- end ngIf: w.data.iconUrl -->
+                    <!-- ngIf: w.data.iconClassName -->
+                    <p class="ellipsis bodyTextTheme ng-binding">CC Men of Color</p>
+                </a><!-- end ngRepeat: w in sideMenu.result --><a class="item-link ng-scope" ng-repeat="w in sideMenu.result" ng-click="click(w);" onclick="clickFeedback(this);">
+                    <!-- ngIf: w.data.iconUrl --><div class="media pull-left ng-scope" ng-if="w.data.iconUrl">
+                        <img ng-src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://s3-us-west-2.amazonaws.com/pluginserver.prod/plugins/5649acd5-51f1-44b8-b4e7-2de045873e90/resources/icon.png" ng-show="haveIcon()" src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://s3-us-west-2.amazonaws.com/pluginserver.prod/plugins/5649acd5-51f1-44b8-b4e7-2de045873e90/resources/icon.png">
+                    </div><!-- end ngIf: w.data.iconUrl -->
+                    <!-- ngIf: w.data.iconClassName -->
+                    <p class="ellipsis bodyTextTheme ng-binding">Share Our App!</p>
+                </a><!-- end ngRepeat: w in sideMenu.result --><a class="item-link ng-scope" ng-repeat="w in sideMenu.result" ng-click="click(w);" onclick="clickFeedback(this);">
+                    <!-- ngIf: w.data.iconUrl --><div class="media pull-left ng-scope" ng-if="w.data.iconUrl">
+                        <img ng-src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://s3-us-west-2.amazonaws.com/pluginserver.prod/plugins/19824f32-5530-47d0-9726-e0507d057592/resources/icon.png" ng-show="haveIcon()" src="http://czi3m2qn.cloudimg.io/s/crop/50x50/http://s3-us-west-2.amazonaws.com/pluginserver.prod/plugins/19824f32-5530-47d0-9726-e0507d057592/resources/icon.png">
+                    </div><!-- end ngIf: w.data.iconUrl -->
+                    <!-- ngIf: w.data.iconClassName -->
+                    <p class="ellipsis bodyTextTheme ng-binding">Twitter</p>
+                </a><!-- end ngRepeat: w in sideMenu.result -->
+            </div>
+            <a class="divider titleBarBackgroundTheme">
+                <p class="ellipsis titleBarTextAndIcons ng-isolate-scope" data-translate="advanced" data-hide-parent="">Advanced</p>
+            </a>
+            <a class="adminMode" ng-click="attachRemoteLogger()" onclick="clickFeedback(this);">
+                <p class="ellipsis bodyTextTheme ng-isolate-scope" data-translate="shipLogs" data-hide-parent="">Ship Logs</p>
+            </a>
+            <!--TO DO data-translate-->
+            <a class="adminMode ng-hide" ng-click="goOffline()" onclick="clickFeedback(this);" ng-show="isOfflineModeEnabled()">
+                <p class="ellipsis bodyTextTheme">Offline Mode</p>
+            </a>
+
+            <script type="text/ng-template" id="myModalContent.html">
+                <div class="padded clearfix text-center">
+                    <div class="content">
+                        <p class="margin-zero" style="color:#5f5f5f !important; font-weight: 500 !important; font-size:14px !important;">Offline Mode</p>
+                        <p class="margin-zero" style="color:#5f5f5f !important;">Would you like this app to be available offline? Please note that some of the features which require a connection will not work.</p>
+                    </div>
+                </div>
+
+                <div class="bottom border-top-grey clearfix">
+                    <div class="col-xs-6 pull-left text-center">
+                        <a class="text-info default-background-hover transition-third" style="color:#32373a !important;" ng-click="later()">No</a>
+                    </div>
+                    <div class="col-xs-6 pull-right text-center border-left-grey">
+                        <a class="text-primary default-background-hover transition-third" ng-click="now()">Yes</a>
+                    </div>
+                </div>
+            </script>
+
+        </nav>
+    </div><!-- ngInclude: 'body.html' --><div ng-include="'body.html'" style="height:100%" class="ng-scope">
+        <style class="ng-scope">
+            /* Offline Mode UI */
+            .offlineMessage {
+                padding-top: 49px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #fff;
+                width: 100%;
+                height: 100%;
+            }
+
+                .offlineMessage .copy-holder {
+                    position: relative;
+                    top: 25%;
+                }
+
+                    .offlineMessage .copy-holder a.btn {
+                        padding: 4px 20px 2px;
+                    }
+        </style>
+        <section ng-controller="fauxHttpCtrl" style="height:100%" class="ng-scope">
+
+            <div id="loading-bar-spinner" ng-show="hideCount" class="ng-hide">
+                <div class="spinner backgroundColorTheme">
+                    <div class="bounce1 bodyTextBackgroundTheme"></div>
+                    <div class="bounce2 bodyTextBackgroundTheme"></div>
+                    <div class="bounce3 bodyTextBackgroundTheme"></div>
+                </div>
+            </div>
+
+            <div ng-controller="launcherCtrl" style="height:100%" class="ng-scope">
+                <!-- ngInclude: navigationBarPath --><div ng-show="showNavigationBar" class="launcherNav ng-scope ng-hide" ng-include="navigationBarPath">
+                    <nav id="pluginNav" class="navbar navbar-default navbar-fixed-top text-center clearfix ng-scope">
+                        <a id="btnBack" class="back-btn-icon icon icon-chevron-left" ng-click="back()" onclick="clickFeedback(this);"></a>
+                        <h4 id="pluginTitle" class="ellipsis ng-binding" ng-click="titleClick()">Home Folder</h4>
+                        <a class="menu-btn-icon icon icon-menu" onclick="cpSync.menu.showSideMenu()"></a>
+                    </nav>
+                </div>
+                <iframe ng-hide="showNoOfflineSupport" id="launcherPlugin" style="border:none; width:1px !important; min-width:100% !important;" scrolling="no" ng-class="{ 'showNav' : showNavigationBar }" seamless="" sandbox="allow-scripts allow-forms  allow-same-origin allow-popups" ng-src="http://s3-us-west-2.amazonaws.com/pluginserver.prod/plugins/368/widget/index.html?fid=launcherPluginv=1473354123024" src="http://s3-us-west-2.amazonaws.com/pluginserver.prod/plugins/368/widget/index.html?fid=launcherPluginv=1473354123024"></iframe>
+                <!-- ngIf: showNoOfflineSupport -->
+                <!-- ngIf: showAccessSettingsMessage -->
+            </div>
+            <div id="menuToggle" class="titleBarBackgroundTheme" onclick="cpSync.menu.showSideMenu(); clickFeedback(this);" ng-show="showMenu">
+                <span class="icon icon-menu titleBarTextAndIcons"></span>
+
+                <div class="notification-circle titleBarTextAndIconsBackground ng-hide" ng-show="unseenPushCount">
+                    <span class="titleBarTheme ng-binding"></span>
+                </div>
+            </div>
+
+
+
+            <div id="pluginContainer">
+                <!-- ngView:  -->
+            </div>
+
+            <div ng-controller="servicesCtrl" style="display: none;" class="ng-scope">
+                <!-- ngRepeat: s in services -->
+            </div>
+
+        </section>
+    </div><!-- ngInclude: 'pages/templates/pushSubscriptions.html' --><div ng-include="'pages/templates/pushSubscriptions.html'" class="ng-scope">
+        <style class="ng-scope">
+            #btnBack {
+                padding: 17px !important;
+                margin: -17px !important;
+            }
+
+            #notificationTitle {
+                padding: 15px 15px 15px 15px !important;
+                margin: -17px auto -17px auto !important;
+            }
+
+            .notification-plugin {
+                height: 100%;
+            }
+
+            .holder {
+                height: 100%;
+            }
+
+            .no-scroll {
+                overflow: hidden;
+                height: 100%;
+            }
+
+                .no-scroll .scrollable {
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+
+            .footer p {
+                font-size: 12px;
+                line-height: 18px;
+                padding: 0 50px;
+            }
+
+            .notification-item {
+                position: relative;
+                padding: 8px 10px 5px;
+            }
+
+                .notification-item:before {
+                    content: '';
+                    border-bottom: 1px solid #ddd !important;
+                    opacity: 0.25;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+
+                .notification-item p,
+                .notification-item a {
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+
+                    .notification-item p:first-child {
+                        font-size: 14px;
+                    }
+
+                .notification-item .col-xs-2 {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -11px;
+                    right: 10px;
+                }
+
+                .notification-item .checkbox label::after {
+                    left: -1px;
+                }
+
+            .btn-holder a {
+                padding: 4px 18px;
+            }
+
+            .pushSubscriptions-holder {
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 1039;
+                background: #fff;
+            }
+
+            .holder .notification-plugin.has-bottom {
+                padding-bottom: 36px;
+            }
+
+            .holder .fixed-bottom.bottom {
+                bottom: 0;
+            }
+
+                .holder .fixed-bottom.bottom a.btn {
+                    border-radius: 0;
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                }
+        </style>
+        <div class="no-scroll padding-zero pushSubscriptions-holder backgroundColorTheme ng-scope ng-hide" ng-controller="pushSubscriptionsCtrl" ng-show="shown">
+            <div class="holder padding-zero">
+                <div class="notification-plugin settings has-bottom">
+                    <div class="scrollable padded">
+                        <h2 class="text-center">Welcome!</h2>
+                        <p>To get the best experience, subscribe to the push notification channels you would like to receive.</p>
+                        <!-- ngRepeat: g in groups -->
+                    </div>
+                    <div class="bottom fixed-bottom row">
+                        <div class="col-xs-12">
+                            <a class="btn btn-primary stretch" ng-click="save();">Continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Template -->
+        <script type="text/ng-template" id="confirm.html" class="ng-scope">
+            <div class="padded clearfix">
+                <div class="content">
+                    <p class="margin-zero">To change your notification settings, you can do so by clicking on "Notifications" in the side menu.</p>
+                </div>
+            </div>
+            <div class="bottom border-top-grey clearfix">
+                <div class="col-xs-12 pull-left text-center">
+                    <a class="text-primary default-background-hover transition-third" onclick="window.closeDialog('cancel')">Ok</a>
+                </div>
+            </div>
+        </script>
+    </div>
+
+    <script type="text/javascript">(function () { return window.SIG_EXT = {} })()</script><input type="file" href="#" ngf-multiple="false" ngf-accept="'image/*'" ngf-select="" ng-model="uploadFile" ngf-allow-dir="true" tabindex="-1" style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height: 0px; border: none; margin: 0px; padding: 0px;"><div id="feedly-mini" title="feedly Mini tookit"></div>
+</body>
+</html>
